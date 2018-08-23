@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>A Vanilla Test Suite for a Vanilla Notes App</title>
+    <style media="screen">
+      body {
+        font-family: sans-serif;
+      }
+      .pass {
+        color: green;
+      }
+      .fail {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tests</h1>
+    <div id="test_results_div">
+    </div>
+    <!-- include source files here... -->
+    <script src="index.js"></script>
+    <!-- include spec files here... -->
+    <script src="./spec/framework/helper_spec_alice.js"></script>
+    <script src="./spec/test_spec_alice.js"></script>
+  </body>
+</html>
