@@ -5,7 +5,7 @@ Makers week 7 - pairing challenge to creat a single page web app without the use
 - [x] Create a unit testing system  
 
 *Created a very rudimentary system*
-Four examples have been captured and stored in the spec/framework folder:
+Four examples have been captured and stored in the spec/framework folder, the test.html files are stored in the archive folder
 
 1. helper_spec_alice.js
 *This uses the assert function. Tests are written as functions which return either true or false.*
