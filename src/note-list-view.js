@@ -15,7 +15,7 @@
     const htmlArray = []
     list.forEach(function(i) {
       htmlArray.push(`<li><div id='${list.indexOf(i)}'><a href='#notes/${list.indexOf(i)+1}'>` + 
-      i.noteText.substring(0, 200) +  "</a></div></li>")
+      i.noteText.substring(0, 20) +  "</a></div></li>")
     });
     return "<ul>" + htmlArray.join("") + "</ul>";
   }
