@@ -1,4 +1,4 @@
-var testNoteList = new NoteList()
+const testNoteList = new NoteList()
 
 expect('New note list returns initial array', testNoteList.getNoteArray()).isEqualTo(testNoteList.noteArray)
 

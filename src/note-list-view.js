@@ -11,8 +11,8 @@
   }
 
   NoteListView.prototype.viewEachNote = function viewEachNote() {
-    var list = this.noteList.noteArray
-    var htmlArray = []
+    const list = this.noteList.noteArray
+    const htmlArray = []
     list.forEach(function(i) {
       htmlArray.push(`<li><div id='${list.indexOf(i)}'><a href='#notes/${list.indexOf(i)+1}'>` + 
       i.noteText.substring(0, 200) +  "</a></div></li>")

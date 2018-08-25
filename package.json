@@ -1,0 +1,26 @@
+{
+  "name": "vanilla_notes",
+  "version": "1.0.0",
+  "description": "Vanilla Notes App ======== Makers week 7 - pairing challenge to creat a single page web app without the use of any frameworks....",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Whatapalaver/vanilla_notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Whatapalaver/vanilla_notes/issues"
+  },
+  "homepage": "https://github.com/Whatapalaver/vanilla_notes#readme"
+  
+}
+  
