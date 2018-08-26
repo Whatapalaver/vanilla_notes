@@ -16,6 +16,31 @@
     this.element.innerHTML = this.noteListView.viewEachNote()
   };
 
+  makeUrlChangeShowNoteForCurrentPage();
+
+  function makeUrlChangeShowNoteForCurrentPage() {
+    window.addEventListener("hashchange", showNoteForCurrentPage);
+  };
+
+  function showNoteForCurrentPage() {
+    showNote(getNoteFromUrl(document.location));
+  };
+
+  function getNoteFromUrl(location) {
+    var position = location.hash.split("#notes/")[1]; //gets back a number
+    var x = new SingleNoteListView((this.noteList).noteArray[position - 1])
+    return x.singleNoteHTML();
+    // var notePosition = location.hash.split("#notes/")[1];
+    // var singleNote = new SingleNoteListView((this.noteList).noteArray[notePosition - 1])
+    // return singleNote.singleNoteHTML();
+  };
+
+  function showNote(Note) {
+    document
+      .getElementById("app")
+      .innerHTML = Note;
+  };
+
   exports.NoteController = NoteController;
 })(this);
 

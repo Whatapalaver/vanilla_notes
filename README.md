@@ -23,3 +23,17 @@ Four examples have been captured and stored in the spec/framework folder, the te
 *This uses an 'expect' object which has properties which are also methods, like isEqual or isLessThan*
 *This construction makes sense to me and is expansible*
 *Designed to be viewed in the browser console only*
+
+- [ ] Create a notes app  
+*This is an unfinished work in progress. I am currently stuck on showing a page view of a single note. Stage 9 of instructions*
+
+My test script for the console:
+
+```javascript
+var testNoteList = new NoteList()
+var testNoteController = new NoteController(testNoteList)
+testNoteList.createNote("FAV drink: Coffee")
+testNoteList.createNote("FAV food: Curry")
+testNoteController.noteHTML()
+```  
+Remember to run the server by typing `http-server`
