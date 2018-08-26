@@ -6,40 +6,37 @@
 
 (function(exports) {
 
-  function NoteController(noteList = new NoteList) {
-    this.noteList = noteList
-    this.noteListView = new NoteListView(noteList)
-    this.element = document.getElementById('app')
+  function NoteController(noteList) {
+    this.noteListView = new NoteListView(noteList);
   }
 
-  NoteController.prototype.noteHTML = function noteHTML() {
-    this.element.innerHTML = this.noteListView.viewEachNote()
+  NoteController.prototype.noteHTML = function() {
+    var element = document.getElementById('app');
+    element.innerHTML = this.noteListView.returnNoteListHTML();
   };
 
-  makeUrlChangeShowNoteForCurrentPage();
+  // makeUrlChangeShowNoteForCurrentPage();
 
-  function makeUrlChangeShowNoteForCurrentPage() {
-    window.addEventListener("hashchange", showNoteForCurrentPage);
-  };
+  // function makeUrlChangeShowNoteForCurrentPage() {
+  //   window.addEventListener("hashchange", showNoteForCurrentPage);
+  // };
 
-  function showNoteForCurrentPage() {
-    showNote(getNoteFromUrl(document.location));
-  };
+  // function showNoteForCurrentPage() {
+  //   showNote(getNoteFromUrl(document.location));
+  // };
 
-  function getNoteFromUrl(location) {
-    var position = location.hash.split("#notes/")[1]; //gets back a number
-    var x = new SingleNoteListView((this.noteList).noteArray[position - 1])
-    return x.singleNoteHTML();
-    // var notePosition = location.hash.split("#notes/")[1];
-    // var singleNote = new SingleNoteListView((this.noteList).noteArray[notePosition - 1])
-    // return singleNote.singleNoteHTML();
-  };
+  // function getNoteFromUrl(location) {
+  //   var position = location.hash.split("#notes/")[1];
+  //   var noteList = this.noteList
+  //   var singleNote = new SingleNoteView((noteList).noteArray[position])
+  //   return singleNote.singleNoteHTML();
+  // };
 
-  function showNote(Note) {
-    document
-      .getElementById("app")
-      .innerHTML = Note;
-  };
+  // function showNote(Note) {
+  //   document
+  //     .getElementById("app")
+  //     .innerHTML = Note;
+  // };
 
   exports.NoteController = NoteController;
 })(this);

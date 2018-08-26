@@ -7,11 +7,16 @@
   <body>
     <h1>A Vanilla Notes App</h1>
     <div id=app> Hello </div>
+    <form id="text" action="/notes" method="post">
+      <textarea id="note" rows="8" cols="80"></textarea>
+      <input type="submit" name="" value="Submit">
+    </form>
     
     <script src="./src/note-model.js"></script>
     <script src="./src/note-list-model.js"></script>
     <script src="./src/note-list-view.js"></script>
     <script src="./src/single-note-view.js"></script>
     <script src="./src/note-controller.js"></script>
+    <script src="./src/page-controller.js"></script>
   </body>
 </html>

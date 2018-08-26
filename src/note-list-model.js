@@ -10,12 +10,15 @@
     this.noteArray = [];
   }
 
-  NoteList.prototype.getNoteArray = function getNoteArray() {
+  NoteList.prototype.getNoteArray = function() {
     return this.noteArray;
   };
 
-  NoteList.prototype.createNote = function createNote(noteText){
-    this.noteArray.push(new Note(noteText));
+  NoteList.prototype.createNote = function(noteText) {
+    var id = this.noteArray.length;
+    var note = new Note(noteText, id)
+    this.noteArray.push(note);
+    return note;
   }
 
   exports.NoteList = NoteList;

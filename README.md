@@ -24,8 +24,9 @@ Four examples have been captured and stored in the spec/framework folder, the te
 *This construction makes sense to me and is expansible*
 *Designed to be viewed in the browser console only*
 
-- [ ] Create a notes app  
-*This is an unfinished work in progress. I am currently stuck on showing a page view of a single note. Stage 9 of instructions*
+- [x] Create a notes app that shows list of notes
+- [x] Create a single page app that shows single view when clicking a list item
+*This last stage was particularly tricky and I only managed it by referring to @Mschmidt19 solution. Which involved creating a page-controller where I declared variables up front.*
 
 My test script for the console:
 

@@ -5,12 +5,17 @@
 
 (function(exports) {
 
-  function Note(noteText) {
+  function Note(noteText, id) {
     this.noteText = noteText;
+    this.id = id;
   }
 
-  Note.prototype.getNote = function getNote() {
+  Note.prototype.getText = function () {
     return this.noteText;
+  };
+
+  Note.prototype.getId = function () {
+    return this.id;
   };
 
   exports.Note = Note;

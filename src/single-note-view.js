@@ -4,13 +4,13 @@
 
 (function(exports) {
 
-  function SingleNoteListView(note) {
+  function SingleNoteView(note) {
     this.note = note;
   }
 
-  SingleNoteListView.prototype.singleNoteHTML = function(){
-    return "<div>" + this.note.getNote() + "</div>"
+  SingleNoteView.prototype.singleNoteHTML = function(){
+    return `<div>${this.note.noteText}</div>`
   }
 
-  exports.SingleNoteListView = SingleNoteListView;
+  exports.SingleNoteView = SingleNoteView;
 })(this);

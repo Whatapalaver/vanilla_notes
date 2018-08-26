@@ -6,18 +6,18 @@
 
 (function(exports) {
 
-  function NoteListView(noteList = new NoteList()) {
+  function NoteListView(noteList) {
     this.noteList = noteList;
+    
   }
 
-  NoteListView.prototype.viewEachNote = function viewEachNote() {
-    const list = this.noteList.noteArray
-    const htmlArray = []
+  NoteListView.prototype.returnNoteListHTML = function() {
+    var list = this.noteList.noteArray;
+    var noteHTML = [];
     list.forEach(function(i) {
-      htmlArray.push(`<li><div id='${list.indexOf(i)}'><a href='#notes/${list.indexOf(i)+1}'>` + 
-      i.noteText.substring(0, 20) +  "</a></div></li>")
+      noteHTML.push(`<li><div id='${list.indexOf(i)}'><a href='#notes/${list.indexOf(i)}'>${i.noteText.substring(0, 20)}</a></div></li>`)
     });
-    return "<ul>" + htmlArray.join("") + "</ul>";
+    return `<ul>${noteHTML.join("")}</ul>`;
   }
 
   exports.NoteListView = NoteListView;
